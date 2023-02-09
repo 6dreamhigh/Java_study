@@ -23,7 +23,7 @@ public class Money {
 		System.out.println("십원 : "+ten+"개");
 		System.out.println("일원 : "+one+"개");
 
-		//12s3d
+	///123456
 	
 	}
 

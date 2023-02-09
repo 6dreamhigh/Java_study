@@ -6,7 +6,7 @@ public class Dice {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		
+		//12345
 		int com1 = (int)(Math.random()*6 +1);
 		int com2 = (int)(Math.random()*6 +1);
 		System.out.println("주사위1 :\t"+com1+"\t"+"주사위2 :\t"+com2);
