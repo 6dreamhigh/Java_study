@@ -1,5 +1,5 @@
 package class__;
-
+//숙제 
 import java.util.Scanner;
 
 public class StringMain2 {
