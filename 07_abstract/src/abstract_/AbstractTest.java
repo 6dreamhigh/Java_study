@@ -1,8 +1,11 @@
 package abstract_;
-
-public class AbstractTest {
-	private String name;
+//메뉴판의 역할
+public abstract class AbstractTest {
+	protected String name;
 	
+	public AbstractTest() {
+		
+	}
 	public AbstractTest(String name) { //POJO (Plain Old Java Object)
 		super();
 		this.name = name;
@@ -13,10 +16,11 @@ public class AbstractTest {
 	public String getName() {
 		return name;
 	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
+	public abstract void setName(String name);//추상메소드
+	//**** 추상메소드가 있는 클래스는 반드시 추상클래스로 정의 되어야 한다.
+//	public void setName(String name) {
+//		this.name = name;
+//	}
 
 	public static void main(String[] args) {
 		
