@@ -7,11 +7,39 @@ public class ExamMain {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		
-		System.out.println("인원 수 입력 : ");
+		System.out.print("인원 수 입력 : ");
 		int cnt = sc.nextInt();
 		
 		//객체 배열을 이용(상속 x)
+		Exam[] ar = new Exam[cnt];
+		//입력
+		for(int k =0;k<ar.length;k++) {
+			ar[k] = new Exam();
+			ar[k].compare();
+			System.out.println();
+		}
+		//출력
+		System.out.println("이름\t 1 2 3 4 5 \t점수");
+		for(Exam e : ar) {			
+			System.out.print(e.getName() +"\t ");
+			for(int i =0; i<e.getOx().length;i++) {
+				System.out.print(e.getOx()[i]+" ");
+			}
+			System.out.println("\t"+e.getScore());
+		}
+	
+		
+//		Exam aa = new Exam();
+//		aa.compare();
+//		System.out.print(aa.getName() +"\t");
+//		for(int i =0; i<aa.getOx().length;i++) {
+//			System.out.println(aa.getOx()[i]+" ");
+//		}
+//		System.out.println("\t"+aa.getScore());
+		
+		//클래스가 다르기 때문에 getter로 받아와야 됨 /aa.getOx()는  배열의 주소값을 받아옴
 	}
+	
 
 }
 /*

@@ -7,16 +7,35 @@ public class StringMain2 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		System.out.print("문자열 입력 : ");
-		String a = sc.next();
+		String original = sc.next();
+		
 		System.out.print("현재 문자열 입력 : ");
 		String now = sc.next();
-		System.out.print("바꿀 문자열 입력 : ");
-		String replace = sc.next();
-		int index = a.indexOf(now);
-		a = a.replace(now,replace);
-		System.out.println(a);
 		
+		System.out.print("바꿀 문자열 입력 : ");
+		String after = sc.next();
+		
+	
+		if(original.length() <now.length()) {
+			System.out.println("입력한 문자열의 크기가 작습니다.");
+			System.out.println("치환 할 수 없습니다.");
+//			System.exit(0);//프로그램을 강제 종료
+			return; //함수를 벗어나라
+		}
+		original = original.toLowerCase();
+		now = now.toLowerCase();
+		//대소문자 섞인 것을 다 소문자로 바꿈
 
+//		int index = original.indexOf(now);//맨 처음에 만난 문자열의 위치만 알려줌
+		//original.indexof(문자,문자열의 개수+위치) 찾고 더 이상 없으면 -1 반환
+		int index = 0,count = 0;
+		while((index = original.indexOf(now,index)) !=-1 ) {			
+			count ++;
+			index = index +now.length();
+			
+		}
+		System.out.println(original.replace(now, after));
+		System.out.println(count+"번 치환");
 	}
 
 }
