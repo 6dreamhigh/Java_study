@@ -18,7 +18,7 @@ public interface InterC extends InterA , InterB{
 }
 		
 /*
-클래스 b extends 클래스a (0)
+클래스 b extends 클래스 a (0)
 extends는 앞뒤 형태 동일해야함 클래스면 클래스 
 오버라이드 할려면 반드시 앞에 클래스가 와야 됨 6번
 */
