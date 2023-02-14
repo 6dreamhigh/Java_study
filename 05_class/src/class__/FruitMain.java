@@ -1,4 +1,5 @@
 package class__;
+//숙제
 
 public class FruitMain {
 

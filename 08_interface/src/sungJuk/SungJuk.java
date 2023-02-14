@@ -1,5 +1,7 @@
 package sungJuk;
 
-public interface SungJuk {
+import java.util.ArrayList;
 
+public interface SungJuk {
+	public void execute(ArrayList<SungJukDTO> arrayList);
 }

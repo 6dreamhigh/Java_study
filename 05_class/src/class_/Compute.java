@@ -13,7 +13,7 @@ public class Compute {
 		this.sum = this.x + this.y;
 		sub = x-y;
 		mul = x*y;
-		div = x/y;
+		div = (double)x/y;
 	}
 	
 	public int getX() {
