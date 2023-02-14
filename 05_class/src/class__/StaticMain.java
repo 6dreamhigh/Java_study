@@ -2,7 +2,7 @@ package class__;
 
 
 class StaticTest{
-	private int a;//필드, 인스턴스 변수
+	private  int a;//필드, 인스턴스 변수
 	private static int b;//필드, 클래스 변수
 	
 	static {
