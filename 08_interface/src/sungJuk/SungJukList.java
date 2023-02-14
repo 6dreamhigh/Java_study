@@ -29,7 +29,8 @@ public class SungJukList implements SungJuk {
 //		}
 		//방법 3
 		for(SungJukDTO sungJukDTO : arrayList) {
-			System.out.println(sungJukDTO.toString());//주소가 나오게 함 클@16진수
+			System.out.println(sungJukDTO.toString());
+			//주소가 나오게 함 클@16진수->DTO에서 toString함수 재정의 ->값 나오도록 함
 		}
 	}
 	
