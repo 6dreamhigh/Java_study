@@ -12,7 +12,7 @@ public class VectorMain {
 		System.out.println("벡터 용량 = "+v.capacity());//기본용량 10,10개씩 증가
 		System.out.println();
 		
-		System.err.println("항목 추가");
+		System.out.println("항목 추가");
 		for(int i =0;i <10;i++) {
 			v.add(i+1+"");
 			System.out.print(v.get(i)+" ");

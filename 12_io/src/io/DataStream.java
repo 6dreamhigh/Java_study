@@ -1,15 +1,18 @@
 package io;
 
+import java.io.DataInputStream;
 import java.io.DataOutputStream;
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
 public class DataStream {
-	public static void main(String[] args) {
+//	public static void main(String[] args) throws IOException {
+	public static void main(String[] args)  {
 		try {
+			//파일 출력
 			//DataOutputStream dos = new DataOutputStream(new FileOutputStream("result.txt"));
-		
 			FileOutputStream fos = new FileOutputStream("result.txt");
 			DataOutputStream dos = new DataOutputStream(fos);
 			
@@ -18,6 +21,22 @@ public class DataStream {
 			dos.writeDouble(185.3);
 			
 			dos.close();
+			
+			//파일 읽기
+			DataInputStream dis = new DataInputStream(new FileInputStream("result.txt"));
+			String name = dis.readUTF(); //파일을 읽어와 name에 보관한다.
+			int age = dis.readInt();
+//			float height = dis.readFloat();//데이터형이 달라 깨져버림
+			double height = dis.readDouble();
+			System.out.println("이름 = "+name);
+			System.out.println("나이 = "+age);
+			System.out.println("키 = "+height);
+			
+			dis.close();
+//			FileInputStream fos2 = new FileInputStream("result.txt");
+//			DataInputStream dos2 = new DataInputStream(fos2);
+			
+			
 		}catch(FileNotFoundException e) {//IOException은 FileNotFoundException의 부모
 			e.printStackTrace();
 		}catch(IOException e) {
